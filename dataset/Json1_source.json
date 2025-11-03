@@ -1,0 +1,19 @@
+{
+	"name": "Json1_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "house-price-parquet.json",
+				"container": "container1"
+			}
+		},
+		"schema": {}
+	}
+}
