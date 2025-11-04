@@ -251,6 +251,25 @@
 						"value": "\t@and(\n\t    and(\n\t        equals(activity('Copy_blob').Status, 'Succeeded'),\n\t        equals(activity('Copy_csv').Status, 'Succeeded')\n\t    ),\n\t    equals(activity('Copy_sql').Status, 'Succeeded')\n\t)\n\t\n",
 						"type": "Expression"
 					},
+					"ifFalseActivities": [
+						{
+							"name": "notification_on_fail",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"method": "POST",
+								"url": "https://prod-05.eastus.logic.azure.com:443/workflows/0471dfa36cb345f4a31225ece91cad16/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=E0fJZiQUYwOJaQPqqXINqTa6cZUx7vxF92Wn0A3qbpM"
+							}
+						}
+					],
 					"ifTrueActivities": [
 						{
 							"name": "Web1",
