@@ -266,7 +266,8 @@
 							"userProperties": [],
 							"typeProperties": {
 								"method": "POST",
-								"url": "https://prod-05.eastus.logic.azure.com:443/workflows/0471dfa36cb345f4a31225ece91cad16/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=E0fJZiQUYwOJaQPqqXINqTa6cZUx7vxF92Wn0A3qbpM"
+								"url": "https://prod-05.eastus.logic.azure.com:443/workflows/0471dfa36cb345f4a31225ece91cad16/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=E0fJZiQUYwOJaQPqqXINqTa6cZUx7vxF92Wn0A3qbpM",
+								"body": "\t@json(concat('{',\n\t  '\"subject\":\"ADF Pipeline Failed! <br>\",',\n\t  '\"body\":\"Pipeline: ', pipeline().Pipeline, ' Failed as Source CSV file is not copied\"',\n\t'}'))\n"
 							}
 						}
 					],
@@ -285,7 +286,8 @@
 							"userProperties": [],
 							"typeProperties": {
 								"method": "POST",
-								"url": "https://prod-94.eastus.logic.azure.com:443/workflows/394cd7ed1dfb43e78b02cbbf52b5fed4/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=9GW9QJm8hWyPY0pVclUUegY334YdYRb1HLKNA2kg07I"
+								"url": "https://prod-94.eastus.logic.azure.com:443/workflows/394cd7ed1dfb43e78b02cbbf52b5fed4/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=9GW9QJm8hWyPY0pVclUUegY334YdYRb1HLKNA2kg07I",
+								"body": "\t@json(concat('{',\n\t  '\"subject\":\"ADF Pipeline successed! <br>\",',\n\t  '\"body\":\"Pipeline: ', pipeline().Pipeline, ' pipeline is successed\"',\n\t'}'))\n"
 							}
 						}
 					]
