@@ -272,7 +272,7 @@
 					],
 					"ifTrueActivities": [
 						{
-							"name": "Web1",
+							"name": "notification_on_success",
 							"type": "WebActivity",
 							"dependsOn": [],
 							"policy": {
