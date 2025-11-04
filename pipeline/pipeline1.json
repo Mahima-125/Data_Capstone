@@ -265,7 +265,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"method": "GET",
+								"method": "POST",
 								"url": "https://prod-05.eastus.logic.azure.com:443/workflows/0471dfa36cb345f4a31225ece91cad16/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=E0fJZiQUYwOJaQPqqXINqTa6cZUx7vxF92Wn0A3qbpM"
 							}
 						}
