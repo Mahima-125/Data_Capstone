@@ -248,7 +248,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "\t@and(\n\t    and(\n\t        equals(activity('Copy_blob').Status, 'Succeeded'),\n\t        equals(activity('Copy_csv').Status, 'Succeeded')\n\t    ),\n\t    equals(activity('Copy_sql').Status, 'Succeeded')\n\t)\n\t\n",
+						"value": "@and(\n    and(\n        equals(coalesce(activity('Copy_blob').Status, ''), 'Succeeded'),\n        equals(coalesce(activity('Copy_csv').Status, ''), 'Succeeded')\n    ),\n    equals(coalesce(activity('Copy_sql').Status, ''), 'Succeeded')\n)",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
@@ -284,7 +284,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"method": "GET",
+								"method": "POST",
 								"url": "https://prod-94.eastus.logic.azure.com:443/workflows/394cd7ed1dfb43e78b02cbbf52b5fed4/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=9GW9QJm8hWyPY0pVclUUegY334YdYRb1HLKNA2kg07I"
 							}
 						}
