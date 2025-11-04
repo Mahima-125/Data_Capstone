@@ -233,6 +233,18 @@
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "If Condition2",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@and(\n    and(\n        equals(activity('Copy_sql_to_bronze').Status, 'Succeeded'),\n        equals(activity('Copy_csv_to_bronze').Status, 'Succeeded')\n    ),\n    equals(activity('Copy_json_to_bronze').Status, 'Succeeded')\n)",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
