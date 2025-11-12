@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "globalHealthData.csv",
 				"container": "bronze"
 			},
 			"columnDelimiter": ",",
