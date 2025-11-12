@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "house-price-parquet.json",
+				"fileName": "Global Health Data.json",
 				"container": "container1"
 			}
 		},
