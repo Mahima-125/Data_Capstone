@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "uc?export=download&id=1UgMddfpAI5apOcnMkGozRCfycVyrynHW"
+				"relativeUrl": "uc?export=download&id=12sikeCD4Jw39zwJEhHtLGcc2mleAj7nZ"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",
